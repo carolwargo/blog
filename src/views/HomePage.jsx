@@ -4,8 +4,8 @@ import { Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import WomanReading from "../assets/images/WomanReading.jpg";
 import Business from "../assets/images/Business.png";
-import PostsShare from "../components/PostsShare";
-import Posts from "../components/Posts";
+//import PostsShare from "../components/PostsShare";
+//import Posts from "../components/Posts";
 import { Button } from "react-bootstrap";
 import {
   MDBFooter,
@@ -225,11 +225,11 @@ const BlogPage = () => {
             </div>
             <div className="w3-col l8 s12 w3-padding-large">
               <div className="w3-card shadow">
-              <Posts />
+          {/**   <Posts />*/}  
               </div>
               <hr />
               <div className="w3-card shadow">
-              <PostsShare />
+          {/**    <PostsShare />*/} 
               </div>
             </div>
             {/*col end for posts iteration */}   
