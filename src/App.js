@@ -2,12 +2,14 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import HomePage from "./views/HomePage.jsx";
+import TopNav from "./components/TopNav.jsx";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+   <TopNav />
         <Routes>
           <Route path="/" element={<HomePage/>} />
 
