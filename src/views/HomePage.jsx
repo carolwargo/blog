@@ -1,71 +1,16 @@
-import React, {useState}from "react";
-import emailjs from "emailjs-com";
-import { Alert } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React from "react";
 import WomanReading from "../assets/images/WomanReading.jpg";
 import Business from "../assets/images/Business.png";
-//import PostsShare from "../components/PostsShare";
-//import Posts from "../components/Posts";
-import { Button } from "react-bootstrap";
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBInput,
-  MDBBtn,
-  MDBCheckbox
-} from "mdb-react-ui-kit";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { MDBContainer, MDBRow, MDBCol, MDBFooter, MDBInput, MDBBtn, MDBCheckbox } from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
+
 const BlogPage = () => {
-
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Send email using Email.js
-    const templateParams = {
-      email_address: email,
-    };
-
-    emailjs.send(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
-      templateParams,
-      "YOUR_USER_ID"
-    )
-    .then((response) => {
-      console.log("Email sent successfully!", response);
-      alert("Thank you for subscribing!");
-    })
-    .catch((error) => {
-      console.error("Email failed to send!", error);
-      alert("Oops! Something went wrong. Please try again.");
-    });
-
-    // Reset form
-    setEmail("");
-  };
 
 
     return (
         <div className="blog" id="blog">
-            <Alert variant="light" className="container-fluid shadow w3-margin-top">
-            <div className="container-fluid w3-padding-64">
-                <Alert.Heading className="w3-center w3-xlarge">MYBLOG.COM</Alert.Heading>
-                <p className="w3-center px-3">
-                    Welcome to my blog! Here you'll find a collection of articles and posts on a variety of topics, including web development, design, and more. Feel free to explore and leave a comment if you have any questions or feedback.
-                </p>    <div className="text-center"> {/* Added text-center class here */}
-      <Link to="/blog#blog">
-        <Button className="btn-primary" size="sm"> 
-         CALL TO ACTION
-        </Button> 
-      </Link>
-    </div>
-
-                </div>
-            </Alert>
+           
+ 
     <div > 
         <div className="">
         <div style={{ maxWidth: "1400px" }}>
@@ -272,34 +217,7 @@ const BlogPage = () => {
   
      <br />
         <div className="w3-container d-flex w3-white justify-content-around" >
-  {/*container start for stats*/}
-  <Alert variant="info" className="shadow w3-margin-top">
-    <p style={{ fontSize: "1.5rem" }}>
-      <b className="w3-margin-left"> DID YOU KNOW ?</b>
-    </p>
-    <ul className="text-left">
-      <li>
-        Social share buttons increase sharing by 700%. <span style={{fontSize:'12px'}}>(Source:
-        ShareThis)</span>
-      </li>
-      <li>
-      Content shared on social media content generates 8x more engagement than other channels.
-      <span style={{fontSize:'12px'}}> (Source: QuickSprout)</span>
-      </li>
-      <li>
-        Articles with share buttons get 7 times more mentions
-        than those without. <span style={{fontSize:'12px'}}> (Source: Buffer)</span>
-      </li>
-      <li>
-        Tweets with share buttons get 2.5 times more clicks than
-        those without. <span style={{fontSize:'12px'}}> (Source: HubSpot)</span>
-      </li>
-      <li>
-      Share Buttons should be prominently displayed near the
-      content and be mobile friendly. <span style={{fontSize:'12px'}}></span>
-      </li>
-    </ul>
-  </Alert>
+
   <div className="text-center w3-padding-bottom">
   <Link to="/page-samples">
             <p><i 
@@ -323,7 +241,7 @@ const BlogPage = () => {
           <MDBCol md="6" size="12" className="mb-4 mb-md-0">
             <MDBContainer className="w3-card w3-padding-large w3-padding-24">
          
-            <form onSubmit={handleSubmit}>
+            <form >
               <MDBRow className="d-flex justify-content-center ">
                 <div className="w3-margin-bottom">
               <h5 >SIGN UP</h5>
@@ -335,8 +253,7 @@ const BlogPage = () => {
                     id="user_email"
                     label="Email address"
                     contrast
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                
                     required
                   />
                   <MDBCheckbox 
