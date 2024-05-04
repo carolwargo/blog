@@ -5,12 +5,10 @@ import Subscribe from "../components/Subscribe";
 import ImageFooter from "../components/ImageFooter";
 import Journal from "../assets/images/Journal.png"; 
 import Pagination from '../components/Pagination'
-import SubHeader from "../components/SubHeader";
 
-const HomePage = () => {
+const BlogPage = () => {
   return (
     <div className="blog" id="blog">
-      <SubHeader/>
       <div>
         <div className="">
           <div style={{ maxWidth: "1400px" }}>
@@ -212,4 +210,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default BlogPage;
