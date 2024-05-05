@@ -1,13 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import NewsHeader from '../Headers/NewsHeader';
+import Header from '../Headers/Header';
 import Footer from '../Footer';
 
-const NewsLayout = () => {
+const Layout = () => {
 
     return (
-        <div className='news-layout' id='news-layout'>
-         <NewsHeader/>
+        <div className='layout' id='layout'>
+            <Header/>
           
             <Outlet/>
           
@@ -18,4 +18,4 @@ const NewsLayout = () => {
 
 }
 
-export default NewsLayout;
+export default Layout;

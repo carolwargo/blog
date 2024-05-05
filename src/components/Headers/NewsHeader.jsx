@@ -1,51 +1,51 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import {
+  MDBIcon,
+} from 'mdb-react-ui-kit';
+
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 const NewsHeader = () => {
-
     return (
     <div>
 
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="w3-black">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+      <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="#action1" style={{color:'white'}}>Home</Nav.Link>
+            <Nav.Link href="#action2" style={{color:'white'}}>About</Nav.Link>
+            <Nav.Link href="#action2" style={{color:'white'}}>Contact</Nav.Link>
+           
             <Nav.Link href="#" disabled>
-              Link
+           
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          <div className='d-flex me-2 justify-content-center'>
+ <span className='mx-1'>
+      <MDBIcon fab icon='twitter' />
+      </span>
+   <span className='mx-2'>
+      <MDBIcon fab icon='facebook-f'/>
+      </span>
+   <span className='mx-1'>
+       <MDBIcon fab icon="instagram"/>
+       </span>
+     <span className='mx-2'>
+       <MDBIcon fab icon='pinterest'/>
+       </span>
+       <span className='mx-1'>
+       <MDBIcon fab icon='google'/>
+       </span>
+       </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

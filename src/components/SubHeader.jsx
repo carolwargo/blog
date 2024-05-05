@@ -6,7 +6,7 @@ const SubHeader = () => {
 
     return (
 
-        <div className='blog' id='blog'>
+        <div>
 <div className="container-fluid bg-light">
   <div className="row justify-content-between align-items-center w3-pale-blue">
     <div className="col-auto">

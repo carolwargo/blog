@@ -1,15 +1,15 @@
 import React from "react";
 import YogaProfilePic from "../assets/images/YogaProfilePic.jpeg";
 import PostsShare from "../components/PostsShare";
-import Subscribe from "../components/Subscribe";  
 import ImageFooter from "../components/ImageFooter";
-import Journal from "../assets/images/Journal.png"; 
+import Journal from "../assets/images/Journal.png";
+import Subscribe from "../components/Subscribe";  
 import Pagination from '../components/Pagination'
 
 const BlogPage = () => {
   return (
     <div className="blog" id="blog">
-      <div>
+    <div>
         <div className="">
           <div style={{ maxWidth: "1400px" }}>
 

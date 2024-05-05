@@ -36,10 +36,10 @@ export default function TopNav() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>Features</MDBNavbarLink>
+              <MDBNavbarLink href='#'>Blog</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>Pricing</MDBNavbarLink>
+              <MDBNavbarLink href='#'>News</MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
           <span className='navbar-text'> Navbar text with an inline element </span>
