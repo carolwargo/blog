@@ -17,20 +17,20 @@ import YogaMember from '../assets/images/YogaStory/YogaMember.png';
 export default function ImageFooter() {
   return (
 
-<div className='text-center text-white' style={{ backgroundColor: '#caced1' }}>
+<div className='text-center text-black' style={{ backgroundColor: '#caced1' }}>
 <MDBContainer className='p-4'>
         {/*card start for all popular posts elements*/}
         <div className="w3-container py-2 w3-margin-bottom">
               {/*container start header popular posts */}
               <h4>Popular Posts</h4>
             </div>
-        <section className='mb-4'>
+        <section className='mb-2'>
             
           <MDBRow>
             <MDBCol lg='2' md='12' className='mb-4 mb-md-0'>
               <MDBRipple
                 rippleColor='light'
-                className='bg-image hover-overlay shadow-1-strong rounded'
+                className='bg-image w3-hover-opacity w3-opacity-off shadow rounded'
               >
                 <img src={YogaMat} alt='yogamat' className='w-100'/>
                 <a href='#!'>
@@ -40,11 +40,12 @@ export default function ImageFooter() {
                   ></div>
                 </a>
               </MDBRipple>
+              <p>Lorem ipsum dolor elit.</p>
             </MDBCol>
             <MDBCol lg='2' md='12' className='mb-4 mb-md-0'>
               <MDBRipple
                 rippleColor='light'
-                className='bg-image hover-overlay shadow-1-strong rounded'
+                className='bg-image w3-hover-opacity w3-opacity-off shadow rounded'
               >
                 <img src={YogaDay} alt='yogaday' className='w-100'/>
                 <a href='#!'>
@@ -54,11 +55,13 @@ export default function ImageFooter() {
                   ></div>
                 </a>
               </MDBRipple>
+             
+              <p>Lorem ipsum dolor elit.</p>
             </MDBCol>
             <MDBCol lg='2' md='12' className='mb-4 mb-md-0'>
               <MDBRipple
                 rippleColor='light'
-                className='bg-image hover-overlay shadow-1-strong rounded'
+                className='bg-image w3-hover-opacity w3-opacity-off shadow rounded'
               >
                 <img src={YogaMorning} alt='yogamorning' className='w-100' />
                 <a href='#!'>
@@ -68,11 +71,12 @@ export default function ImageFooter() {
                   ></div>
                 </a>
               </MDBRipple>
+               <p>Lorem ipsum dolor elit.</p>
             </MDBCol>
             <MDBCol lg='2' md='12' className='mb-4 mb-md-0'>
               <MDBRipple
                 rippleColor='light'
-                className='bg-image hover-overlay shadow-1-strong rounded'
+                className='bg-image w3-hover-opacity w3-opacity-off shadow rounded'
               >
                 <img src={YogaSteps} alt='steps' className='w-100' />
                 <a href='#!'>
@@ -82,11 +86,12 @@ export default function ImageFooter() {
                   ></div>
                 </a>
               </MDBRipple>
+               <p>Lorem ipsum dolor elit.</p>
             </MDBCol>
             <MDBCol lg='2' md='12' className='mb-4 mb-md-0'>
               <MDBRipple
                 rippleColor='light'
-                className='bg-image hover-overlay shadow-1-strong rounded'
+                className='bg-image w3-hover-opacity w3-opacity-off shadow rounded'
               >
                 <img src={YogaClass} alt='class' className='w-100' />
                 <a href='#!'>
@@ -96,11 +101,12 @@ export default function ImageFooter() {
                   ></div>
                 </a>
               </MDBRipple>
+              <p>Lorem ipsum dolor elit.</p>
             </MDBCol>
             <MDBCol lg='2' md='12' className='mb-4 mb-md-0'>
               <MDBRipple
                 rippleColor='light'
-                className='bg-image hover-overlay shadow-1-strong rounded'
+                className='bg-image w3-hover-opacity w3-opacity-off shadow rounded'
               >
                 <img src= {YogaMember} alt='member' className='w-100' />
                 <a href='#!'>
@@ -110,6 +116,7 @@ export default function ImageFooter() {
                   ></div>
                 </a>
               </MDBRipple>
+              <p>Lorem ipsum dolor elit.</p>
             </MDBCol>
           </MDBRow>
         </section>

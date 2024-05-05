@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';    
-import { FaCoffee, FaGlassWhiskey } from 'react-icons/fa';
+import { FaCoffee} from 'react-icons/fa';
 
 const SubHeader = () => {
 
     return (
 
         <div>
-<div className="container-fluid bg-light">
-  <div className="row justify-content-between align-items-center w3-pale-blue">
+<div className="container-fluid w3-light-gray">
+  <div className="row justify-content-between align-items-center ">
     <div className="col-auto">
         <Link to='/' className='link-dark text-decoration-none'>
       <p className="m-3">Home</p>
@@ -19,14 +19,11 @@ const SubHeader = () => {
     <span>
     <Link to='/blog' className='link-dark text-decoration-none mx-1'>
     <FaCoffee className='mx-1'/>  
-
-   Blog
       </Link>
       </span>
      <span> 
       <Link to='/news' className='link-dark text-decoration-none mx-1'>
-      <FaGlassWhiskey className='mx-1'/>  
-     Newspaper
+     Newsletter
       </Link>
       </span>
     

@@ -23,7 +23,7 @@ export default function App() {
       <MDBContainer fluid className='align-items-center text-black'>
         
         <MDBNavbarBrand as='/'>
-          <i className='fa fa-feather'>
+          <i className='fa fa-feather text-muted' >
             </i>
             </MDBNavbarBrand>
         <MDBNavbarToggler
@@ -40,13 +40,13 @@ export default function App() {
         <MDBCollapse navbar open={openNavText}>
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0 justify-content-center align-items-center'>
           <MDBNavbarItem>
-  <Link to="/" className="nav-link" aria-current="page">Home</Link>
+  <Link to="/" className="nav-link" aria-current="page" style={{fontSize:'18px'}}>Home</Link>
 </MDBNavbarItem>
 <MDBNavbarItem>
-  <Link to="/blog" className="nav-link">Personal</Link>
+  <Link to="/" className="nav-link"style={{fontSize:'18px'}}>Personal</Link>
 </MDBNavbarItem>
 <MDBNavbarItem>
-  <Link to="/news" className="nav-link">News</Link>
+  <Link to="/" className="nav-link" style={{fontSize:'18px'}}>News</Link>
 </MDBNavbarItem>
           </MDBNavbarNav>
         <span className='navbar-text text-muted'>     
