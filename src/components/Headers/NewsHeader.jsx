@@ -24,9 +24,8 @@ const NewsHeader = () => {
             <Nav.Link href="#action1" style={{color:'white'}}>Home</Nav.Link>
             <Nav.Link href="#action2" style={{color:'white'}}>About</Nav.Link>
             <Nav.Link href="#action2" style={{color:'white'}}>Contact</Nav.Link>
-           
+    
             <Nav.Link href="#" disabled>
-           
             </Nav.Link>
           </Nav>
           <div className='d-flex me-2 justify-content-center'>

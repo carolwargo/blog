@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+//import {motion} from 'framer-motion';
 import {
   MDBNavbar,
   MDBNavbarNav,
@@ -9,7 +10,6 @@ import {
   MDBCollapse,
 } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
-
 
 const NewsSecondary = () => {
   const [openNavText, setOpenNavText] = useState(false);
@@ -40,26 +40,26 @@ const NewsSecondary = () => {
   <Link to="/blog" className='nav-link text-black fw-bolder'>Culture</Link>
 </MDBNavbarItem>
 <MDBNavbarItem className='mx-2'>
-  <Link to="/blog" className='nav-link text-black fw-bolder'>Lifestyle</Link>
-</MDBNavbarItem>
-<MDBNavbarItem>
-  <Link to="/news" className='nav-link text-black fw-bolder'>Politics</Link>
+  <Link to="/news" className='nav-link text-black fw-bolder'>Fitness</Link>
 </MDBNavbarItem>
 <MDBNavbarItem className='mx-2'>
-  <Link to="/news" className='nav-link text-black fw-bolder'>Science</Link>
+  <Link to="/blog" className='nav-link text-black fw-bolder'>Lifestyle</Link>
 </MDBNavbarItem>
 <MDBNavbarItem>
   <Link to="/news" className='nav-link text-black fw-bolder'>Sports</Link>
 </MDBNavbarItem>
+<MDBNavbarItem>
+  <Link to="/news" className='nav-link text-black fw-bolder'>Travel</Link>
+</MDBNavbarItem>
+
           </MDBNavbarNav>
     
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
 
-
     </header>
-   
+
     </div>
   );
 }
