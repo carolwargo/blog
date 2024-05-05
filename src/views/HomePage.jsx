@@ -8,9 +8,9 @@ import Journal from "../assets/images/Journal.png";
 import Subscribe from "../components/Subscribe";  
 import Pagination from '../components/Pagination'
 
-const BlogPage = () => {
+const HomePage = () => {
   return (
-    <div className="blog" id="blog">
+    <div className="home" id="home">
     <div>
         <div className="">
           <div style={{ maxWidth: "1400px" }}>
@@ -212,4 +212,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+export default HomePage;

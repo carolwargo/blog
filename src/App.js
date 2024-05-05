@@ -15,16 +15,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
-
           <Route path="/" element={<Layout />}>
     <Route index element={<HomePage />} />
 </Route>
-          <Route path="/blog" element={<BlogLayout />}>
+          <Route path="/blog-page" element={<BlogLayout />}>
     <Route index element={<BlogPage />} />
 </Route>
 
 
-<Route path="/news" element={<NewsLayout />}>
+<Route path="/news-page" element={<NewsLayout />}>
     <Route index element={<NewsPage />} />
 </Route>
 

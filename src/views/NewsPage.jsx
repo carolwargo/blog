@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {motion} from 'framer-motion';
 import { GiNewspaper } from "react-icons/gi";
 import Business from '../assets/images/Business.png';  
@@ -17,7 +18,7 @@ const News = () => {
   
     </div>
     <div className="col-auto center">
-      <h1><GiNewspaper/> <strong>NEWS!</strong></h1>  
+    <Link to='/'><h1><GiNewspaper style={{backgroundColor:'burlywood'}}/> <strong>NEWS!</strong></h1>  </Link>  
     </div>
     <div className="col-auto">  
     </div>
