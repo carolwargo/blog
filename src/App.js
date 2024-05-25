@@ -13,7 +13,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/blog">
       <Routes>
           <Route path="/" element={<Layout />}>
     <Route index element={<HomePage />} />
