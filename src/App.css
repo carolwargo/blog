@@ -14,20 +14,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
-/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
-html {
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; /* Safari */
-  -moz-text-size-adjust: 100%; /* Firefox */
-  -ms-text-size-adjust: 100%; /* Internet Explorer */
-  text-size-adjust: 100%; /* Standard */
-}
 
-
-
-/* reset.css or InputStyles.css */
 
 /* Normalize all input elements */
 input,
