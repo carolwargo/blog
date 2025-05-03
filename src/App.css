@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('@fortawesome/fontawesome-free/css/all.min.css');
+
+/* W3.CSS 5.02 March 31 2025 by Jan Egil and Borge Refsnes */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html {
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; /* Safari */
+  -moz-text-size-adjust: 100%; /* Firefox */
+  -ms-text-size-adjust: 100%; /* Internet Explorer */
+  text-size-adjust: 100%; /* Standard */
+}
+
+
+
+/* reset.css or InputStyles.css */
+
+/* Normalize all input elements */
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Remove browser-specific styling */
+  background-color: #efeeee !important;
+  box-shadow: 0 0 0px 1000px #efeeee inset !important;
+  -webkit-text-fill-color: #212121 !important;
+  transition: background-color 0s ease-in-out 0s;
+}
+
+/* Override autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background-color: #efeeee !important;
+    -webkit-box-shadow: 0 0 0px 1000px #efeeee inset !important;
+    -webkit-text-fill-color: #212121 !important;
+    transition: background-color 0s ease-in-out 0s;
+}
+
+/* Ensure React-Bootstrap Form.Control inherits reset */
+.form-control {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  outline: none !important;
+}
+
+/* Optional: Normalize focus for all inputs */
+input:focus,
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
