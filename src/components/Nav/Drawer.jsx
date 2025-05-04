@@ -23,7 +23,7 @@ const menuItems = [
   { to: '/settings', icon: 'bi-gear', label: 'Settings' },
 ];
 
-export default function DrawerLayout() {
+export default function HomeLayout() {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const [open, setOpen] = React.useState(false);
