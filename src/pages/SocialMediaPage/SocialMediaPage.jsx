@@ -1,6 +1,6 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './SocialmediaPage.css'; // Assuming W3.CSS styles are moved here
+
 import { useState } from 'react';
 
 import {

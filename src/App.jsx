@@ -1,54 +1,49 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import React from 'react';
-import Homepage from './pages/Homepage'; // Import Home component
-import ErrorBoundary from './components/ErrorBoundary'; // Import ErrorBoundary component
-
-
-import ClassesPage from './pages/ClassesPage';
-import CheckoutPage from './pages/CheckoutPage';
-import SocialmediaPage from './pages/SocialMediaPage/SocialMediaPage';
-import NavigationPage from './pages/NavigationPage'
-
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './App.css';
+// App.js
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+import Homepage from "./pages/Homepage";
+import ClassesPage from "./pages/ClassesPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import SocialmediaPage from "./pages/SocialMediaPage/SocialMediaPage";
+import DashboardPage from './pages/DashboardPage';
+import HomeLayout from "./Layouts/HomeLayout"; // Changed import name to DrawerLayout
+import UserHome from './pages/UserHome';
+import Newsfeed from './pages/NewsfeedPage';
+import Explore from './components/Explore/Explore';
+import ErrorBoundary from "./components/ErrorBoundary";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-         <AuthProvider>
-      <BrowserRouter basename='/blog'>
+      <BrowserRouter>
         <ErrorBoundary>
           <Routes>
-
-        {/* Public Website Homepage */}
-  <Route path="/" element={<Homepage />} />
-  <Route path="/classes" element={<ClassesPage />} />
-  <Route path="/checkout" element={<CheckoutPage />} />
-  <Route path='/navpage' element={<NavigationPage/>}/>
-  <Route path="/social" element={<SocialmediaPage />} />
-
-
-                    {/* Dashboard layout routes 
-        <Route path="/profile" element={<UserProfileLayout />}>
-        <Route index element={<UserProfile />} />
-              <Route path="user" element={<UserProfile />} /> 
+            <Route path="/" element={<Homepage />} />
+            <Route path="/newsfeed" element={<Newsfeed />} />
+            <Route path="/social" element={<SocialmediaPage />} />
+            <Route path="/dash" element={<DashboardPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/classes" element={<ClassesPage />} />
+            <Route path="*" element={<NotFound />} />
+         
+            <Route path="/user-home" element={<HomeLayout />}> {/* Changed to DrawerLayout */}
+              <Route index element={<UserHome />} />
+              <Route path="newsfeed" element={<Newsfeed />} />
+              <Route path="explore" element={<Explore />} />
             </Route>
-            */}
-   
           </Routes>
         </ErrorBoundary>
       </BrowserRouter>
-      </AuthProvider>
     </div>
   );
 }
 
-// Create a component for handling not found routes
 function NotFound() {
-  console.error("Page not found!"); // Log error to console
+  console.error("Page not found!");
   return <h1>404 - Not Found</h1>;
 }
 
 export default App;
-
