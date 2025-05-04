@@ -1,4 +1,3 @@
-// Layouts/HomeLayout.jsx
 import * as React from 'react';
 import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -11,6 +10,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import GirlCamera from '../assets/images/GirlCamera.png';
+import { MdVerified } from "react-icons/md";
 
 const menuItems = [
   { to: '/user-home', icon: 'bi-house-door', label: 'Home' },
@@ -23,11 +23,12 @@ const menuItems = [
   { to: '/user-home/settings', icon: 'bi-gear', label: 'Settings' },
 ];
 
-export default function HomeLayout() { // Changed from DrawerLayout to HomeLayout
+export default function HomeLayout() {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const drawerWidth = 300; // Define drawer width as a constant for reuse
 
   const openMenu = Boolean(anchorEl);
 
@@ -63,6 +64,11 @@ export default function HomeLayout() { // Changed from DrawerLayout to HomeLayou
       onClick={!isLargeScreen ? toggleDrawer(false) : undefined}
       onKeyDown={!isLargeScreen ? toggleDrawer(false) : undefined}
     >
+      {isLargeScreen && (
+        <Typography sx={{ fontSize: '1.5rem', px: 2, py:1, mt: 3 }} noWrap component="div">
+       LOGO
+        </Typography>
+      )}
       <List sx={{ width: '100%' }}>
         {menuItems.map((item) => (
           <ListItem key={item.label} disablePadding>
@@ -95,7 +101,9 @@ export default function HomeLayout() { // Changed from DrawerLayout to HomeLayou
           />
           <Box>
             <Typography variant="subtitle1" sx={{ fontSize: '.9rem' }}>
-              User Name
+              User Name     <span>
+                            <MdVerified style={{ color: "#0d6efd", fontSize: "1rem" }} />
+                          </span>
             </Typography>
             <Typography variant="body2" color="text.secondary">
               @username
@@ -119,10 +127,11 @@ export default function HomeLayout() { // Changed from DrawerLayout to HomeLayou
   );
 
   return (
-    <Box sx={{ display: 'flex', width: '100%' }}>
-      <AppBar position="fixed" color="default" sx={{ bgcolor: 'background.paper', boxShadow: 1 }}>
-        <Toolbar>
-          {!isLargeScreen && (
+    <Box sx={{ display: 'flex', width: '100%', minHeight: '100vh' }}>
+      {/* Conditionally render AppBar only for non-large screens */}
+      {!isLargeScreen && (
+        <AppBar position="fixed" color="default" sx={{ bgcolor: 'background.paper', boxShadow: 1 }}>
+          <Toolbar>
             <IconButton
               edge="start"
               color="inherit"
@@ -132,24 +141,27 @@ export default function HomeLayout() { // Changed from DrawerLayout to HomeLayou
             >
               <Avatar alt="Profile Picture" src={GirlCamera} sx={{ width: 40, height: 40 }} />
             </IconButton>
-          )}
-          <Typography variant="h6" noWrap component="div">
-            www.brand.com
-          </Typography>
-        </Toolbar>
-      </AppBar>
+            <Typography sx={{ fontSize: '.8rem' }} noWrap component="div">
+              www.brand.com
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      )}
 
+      {/* Drawer */}
       <Drawer
         variant={isLargeScreen ? 'permanent' : 'temporary'}
         open={isLargeScreen ? true : drawerOpen}
         onClose={toggleDrawer(false)}
         anchor="left"
         sx={{
+          width: isLargeScreen ? drawerWidth : 'auto',
+          flexShrink: 0,
           '& .MuiDrawer-paper': {
-            width: 300,
+            width: drawerWidth,
             boxSizing: 'border-box',
             overflowY: 'auto',
-            pt: '64px',
+            pt: isLargeScreen ? 0 : '64px',
             scrollbarWidth: 'none',
             '&::-webkit-scrollbar': { display: 'none' },
           },
@@ -158,7 +170,17 @@ export default function HomeLayout() { // Changed from DrawerLayout to HomeLayou
         {drawerContent}
       </Drawer>
 
-      <Box component="main" sx={{ flexGrow: 1, p: 3, pt: 10 }}>
+      {/* Main content */}
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          pt: isLargeScreen ? 3 : 10,
+          ml: isLargeScreen ? `${drawerWidth}px` : 0, // Offset by drawer width on large screens
+          width: isLargeScreen ? `calc(100% - ${drawerWidth}px)` : '100%',
+        }}
+      >
         <Outlet />
       </Box>
     </Box>

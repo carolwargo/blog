@@ -1,15 +1,13 @@
 import React from 'react';
+import Header from './Header/Header'; 
+import GirlCamera from '../assets/images/GirlCamera.png';   
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Explore from './Explore/Explore';
+//import Explore from './Explore/Explore';
 
 
 import {
-  FaHome,
-  FaUser,
-  FaEnvelope,
-  FaBell,
-  FaBars,
+
   FaPen, // Replace FaPencil with FaPen
   FaHome as FaHomeIcon,
   FaThumbsUp,
@@ -21,31 +19,23 @@ export default function Newsfeed() {
 
 
   return (
-    <div className="w3-theme-l5">
-       <div className="w3-container w3-content" style={{ maxWidth: '1400px', marginTop: '80px' }}>
-          {/* The Grid */}
     
-          <div className="w3-row-padding">
-        <div className="w3-col m12">
-          <div className="w3-card w3-round w3-white">
-            <div className="w3-container w3-padding">
-              <h6 className="w3-opacity">Social Media template by w3.css</h6>
-              <p contenteditable="true" className="w3-border w3-padding">Status: Feeling Blue</p>
-              <button type="button" className="w3-button w3-theme"><i className="fa fa-pencil"></i> Post</button> 
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="w3-theme-l5">
+   
+       <div className="w3-container">
+          {/* The Grid */}
+          <Header/>
 
 
-          <div className="w3-card w3-white w3-round w3-margin w3-padding">
-      <div className="d-flex align-items-start my-3">
-        <img
-          src="https://i.pravatar.cc/150?img=3"
-          alt="User avatar"
-          className="w3-circle me-3"
-          style={{ width: '50px', height: '50px', objectFit: 'cover' }}
-        />
+
+          <div className="w3-card w3-white w3-round w3-margin px-3 py-2">
+      <div className="d-flex align-items-start my-3 border-bottom">
+      <img
+                  src={GirlCamera }
+                  alt="Avatar 2" 
+                  className="w3-left w3-circle w3-margin-right"
+                  style={{ width: '60px' }}
+                />
         <textarea
           className="form-control w3-border w3-round"
           rows="3"
@@ -54,10 +44,10 @@ export default function Newsfeed() {
         ></textarea>
       </div>
       
-      <div className="w3-right-align">
-        <button type="button" className="w3-button w3-theme w3-round">
-          <FaPen className="me-2" />
-          Post
+      <div className="w3-right-align mb-2">
+        <button className=' btn btn-dark'>
+        <FaPen className="me-2" />
+        Post
         </button>
       </div>
     </div>

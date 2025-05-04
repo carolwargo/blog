@@ -6,9 +6,12 @@ import ClassesPage from "./pages/ClassesPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import SocialmediaPage from "./pages/SocialMediaPage/SocialMediaPage";
 import DashboardPage from './pages/DashboardPage';
+
+
+
 import HomeLayout from "./Layouts/HomeLayout"; // Changed import name to DrawerLayout
 import UserHome from './pages/UserHome';
-import Newsfeed from './pages/NewsfeedPage';
+import Newsfeed from './components/Newsfeed';
 import Explore from './components/Explore/Explore';
 import ErrorBoundary from "./components/ErrorBoundary";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -22,7 +25,6 @@ function App() {
         <ErrorBoundary>
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/newsfeed" element={<Newsfeed />} />
             <Route path="/social" element={<SocialmediaPage />} />
             <Route path="/dash" element={<DashboardPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
@@ -31,8 +33,8 @@ function App() {
          
             <Route path="/user-home" element={<HomeLayout />}> {/* Changed to DrawerLayout */}
               <Route index element={<UserHome />} />
-              <Route path="newsfeed" element={<Newsfeed />} />
-              <Route path="explore" element={<Explore />} />
+              <Route path="/user-home/newsfeed" element={<Newsfeed />} />
+              <Route path="/user-home/explore" element={<Explore />} />
             </Route>
           </Routes>
         </ErrorBoundary>
