@@ -1,0 +1,137 @@
+/* Style ReactQuill to match textarea without border */
+.form-control.w3-round {
+    background-color: #fff;
+    width: 100% !important; /* Ensure full width */
+  }
+  
+  .form-control.w3-round .ql-container {
+    border: none !important; /* Borderless */
+    min-height: 80px; /* Match textarea height */
+    font-size: 1rem;
+    border-radius: 4px !important; /* Rounded corners */
+  }
+  
+  .form-control.w3-round .ql-editor {
+    padding: 8px;
+    min-height: 80px; /* Prevent shrinking */
+    border: none !important; /* Borderless */
+  }
+  
+  .form-control.w3-round .ql-editor.ql-blank::before {
+    color: #999 !important; /* Placeholder text */
+    content: attr(placeholder) !important;
+    font-style: italic;
+    display: block;
+  }
+  
+  .form-control.w3-round .ql-toolbar {
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+    background-color: #f8f9fa;
+    border-radius: 4px 4px 0 0;
+    display: block !important; /* Ensure toolbar visible */
+  }
+  
+  /* Previously undefined classes */
+  .preview-container {
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .preview-image,
+  .preview-video {
+    max-width: 100%;
+    max-height: 120px;
+    border-radius: 4px;
+  }
+  
+  /* Toolbar styles */
+  .toolbar {
+    display: flex;
+    justify-content: space-between; /* Image/video left, Post right */
+    align-items: center; /* Vertically center buttons */
+    gap: 8px; /* Space between buttons */
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  
+  /* Toolbar button styles */
+  .toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+padding: 5px;
+    background-color: #f1f1f1; /* Light grey */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+    
+  /* Toolbar button styles */
+  .toolbar-btn-transparent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+padding: 6px;
+    background-color: transparent; /* no bg */
+    border-radius: 4px;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .toolbar-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .toolbar-btn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+  
+  .post-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+padding: 8px;
+    background-color: #090909; /* Light grey */
+    border: 1px solid #060606;
+    border-radius: 4px;
+    color: #f3f2f2;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  /* Flex layout */
+  .flex-grow-1 {
+    flex-grow: 1 !important;
+    width: 100%; /* Ensure full width */
+  }
+  
+  /* Bootstrap 4 compatibility */
+  .d-flex.gap-2 {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem !important;
+  }
+  
+
+
+  
+
+  .newsfeed-scroll {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  

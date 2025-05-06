@@ -12,14 +12,14 @@ import Stepper from '@mui/material/Stepper';
 import Typography from '@mui/material/Typography';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import AddressForm from '../components/CheckoutPageComponents/AddressForm';
-import Info from '../components/CheckoutPageComponents/Info';
-import InfoMobile from '../components/CheckoutPageComponents/InfoMobile';
-import PaymentForm from '../components/CheckoutPageComponents/PaymentForm';
-import Review from '../components/CheckoutPageComponents/Review';
-import SitemarkIcon from '../components/CheckoutPageComponents/SitemarkIcon';
-import AppTheme from '../shared-theme/AppTheme';
-import ColorModeIconDropdown from '../shared-theme/ColorModeIconDropdown';
+import AddressForm from '../../components/CheckoutPageComponents/AddressForm';
+import Info from '../../components/CheckoutPageComponents/Info';
+import InfoMobile from '../../components/CheckoutPageComponents/InfoMobile';
+import PaymentForm from '../../components/CheckoutPageComponents/PaymentForm';
+import Review from '../../components/CheckoutPageComponents/Review';
+import SitemarkIcon from '../../components/CheckoutPageComponents/SitemarkIcon';
+import AppTheme from '../../shared-theme/AppTheme';
+import ColorModeIconDropdown from '../../shared-theme/ColorModeIconDropdown';
 
 const steps = ['Shipping address', 'Payment details', 'Review your order'];
 function getStepContent(step) {

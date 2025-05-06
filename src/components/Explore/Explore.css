@@ -5,7 +5,9 @@
 .explore-business {
     border-bottom: 1px solid #dee2e6; /* Bootstrap border-bottom color */
     margin-top: 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .explore-topics-entry,
   .explore-classes-entry, 
@@ -71,4 +73,10 @@
   
   .btn-float:hover {
     background-color: #333;
+  }
+
+  .explore-scroll {
+    height: 100vh;
+    overflow-y: auto;
+    padding-right: 10px;
   }

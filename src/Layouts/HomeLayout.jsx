@@ -1,6 +1,6 @@
+// ./src/Layouts/HomeLayout.jsx
 import * as React from 'react';
-import { Outlet } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import {
   Box, Drawer, List, ListItem, ListItemButton,
   ListItemIcon, ListItemText, Avatar, IconButton,
@@ -10,25 +10,16 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import GirlCamera from '../assets/images/GirlCamera.png';
-import { MdVerified } from "react-icons/md";
-
-const menuItems = [
-  { to: '/user-home', icon: 'bi-house-door', label: 'Home' },
-  { to: '/user-home/newsfeed', icon: 'bi-newspaper', label: 'Newsfeed' },
-  { to: '/user-home/explore', icon: 'bi-search', label: 'Explore' },
-  { to: '/user-home/notifications', icon: 'bi-bell', label: 'Notifications' },
-  { to: '/user-home/messages', icon: 'bi-chat-quote', label: 'Messages' },
-  { to: '/user-home/network', icon: 'bi-people', label: 'Network' },
-  { to: '/user-home/profile', icon: 'bi-person-circle', label: 'Profile' },
-  { to: '/user-home/settings', icon: 'bi-gear', label: 'Settings' },
-];
+import { MdVerified } from 'react-icons/md';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { menuItems, drawerWidth } from '../constants/MenuItems'; // Import constants
 
 export default function HomeLayout() {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const drawerWidth = 300; // Define drawer width as a constant for reuse
 
   const openMenu = Boolean(anchorEl);
 
@@ -65,8 +56,8 @@ export default function HomeLayout() {
       onKeyDown={!isLargeScreen ? toggleDrawer(false) : undefined}
     >
       {isLargeScreen && (
-        <Typography sx={{ fontSize: '1.5rem', px: 2, py:1, mt: 3 }} noWrap component="div">
-       LOGO
+        <Typography sx={{ fontSize: '1.5rem', px: 2, py: 1, mt: 3 }} noWrap component="div">
+          LOGO
         </Typography>
       )}
       <List sx={{ width: '100%' }}>
@@ -101,9 +92,9 @@ export default function HomeLayout() {
           />
           <Box>
             <Typography variant="subtitle1" sx={{ fontSize: '.9rem' }}>
-              User Name     <span>
-                            <MdVerified style={{ color: "#0d6efd", fontSize: "1rem" }} />
-                          </span>
+              User Name <span>
+                <MdVerified style={{ color: "#0d6efd", fontSize: "1rem" }} />
+              </span>
             </Typography>
             <Typography variant="body2" color="text.secondary">
               @username
@@ -128,7 +119,6 @@ export default function HomeLayout() {
 
   return (
     <Box sx={{ display: 'flex', width: '100%', minHeight: '100vh' }}>
-      {/* Conditionally render AppBar only for non-large screens */}
       {!isLargeScreen && (
         <AppBar position="fixed" color="default" sx={{ bgcolor: 'background.paper', boxShadow: 1 }}>
           <Toolbar>
@@ -141,14 +131,10 @@ export default function HomeLayout() {
             >
               <Avatar alt="Profile Picture" src={GirlCamera} sx={{ width: 40, height: 40 }} />
             </IconButton>
-            <Typography sx={{ fontSize: '.8rem' }} noWrap component="div">
-              www.brand.com
-            </Typography>
           </Toolbar>
         </AppBar>
       )}
 
-      {/* Drawer */}
       <Drawer
         variant={isLargeScreen ? 'permanent' : 'temporary'}
         open={isLargeScreen ? true : drawerOpen}
@@ -170,15 +156,16 @@ export default function HomeLayout() {
         {drawerContent}
       </Drawer>
 
-      {/* Main content */}
       <Box
         component="main"
         sx={{
           flexGrow: 1,
-          p: 3,
-          pt: isLargeScreen ? 3 : 10,
-          ml: isLargeScreen ? `${drawerWidth}px` : 0, // Offset by drawer width on large screens
+        
+     
           width: isLargeScreen ? `calc(100% - ${drawerWidth}px)` : '100%',
+          justifyContent: 'center',
+          display: 'flex',
+          alignItems: 'center',
         }}
       >
         <Outlet />

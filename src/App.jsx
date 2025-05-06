@@ -2,18 +2,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 import Homepage from "./pages/Homepage";
-import ClassesPage from "./pages/ClassesPage";
-import CheckoutPage from "./pages/CheckoutPage";
+import ClassesPage from "./pages/ClassesPage/ClassesPage";
+import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import SocialmediaPage from "./pages/SocialMediaPage/SocialMediaPage";
-import DashboardPage from './pages/DashboardPage';
+import DashboardPage from './pages/DashboardPage/DashboardPage';
 
 
 
 import HomeLayout from "./Layouts/HomeLayout"; // Changed import name to DrawerLayout
-import UserHome from './pages/UserHome';
-import Newsfeed from './components/Newsfeed';
+import UserHome from './pages/UserHome/UserHome';
+import Newsfeed from './components/Newsfeed/Newsfeed';
 import Explore from './components/Explore/Explore';
-import ErrorBoundary from "./components/ErrorBoundary";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -31,10 +31,10 @@ function App() {
             <Route path="/classes" element={<ClassesPage />} />
             <Route path="*" element={<NotFound />} />
          
-            <Route path="/user-home" element={<HomeLayout />}> {/* Changed to DrawerLayout */}
+            <Route path="/home" element={<HomeLayout />}> {/* Changed to DrawerLayout */}
               <Route index element={<UserHome />} />
-              <Route path="/user-home/newsfeed" element={<Newsfeed />} />
-              <Route path="/user-home/explore" element={<Explore />} />
+              <Route path="/home/newsfeed" element={<Newsfeed />} />
+              <Route path="/home/explore" element={<Explore />} />
             </Route>
           </Routes>
         </ErrorBoundary>
