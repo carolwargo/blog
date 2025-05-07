@@ -11,7 +11,7 @@ export default function Homepage() {
   <p className="text-center">This is the main page of our application.</p>
   <div><span></span>
   <button className='btn btn-primary'>Admin Home</button>
-  <Link to='/user-home'>
+  <Link to='/home'>
   <button className='btn btn-secondary ms-3 px-4'>User Home</button>
   </Link>
   </div>
