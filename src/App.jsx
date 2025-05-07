@@ -6,7 +6,7 @@ import ClassesPage from "./pages/ClassesPage/ClassesPage";
 import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import SocialmediaPage from "./pages/SocialMediaPage/SocialMediaPage";
 import DashboardPage from './pages/DashboardPage/DashboardPage';
-import ExplorePage from './pages/ExplorePages/ExplorePage'
+//import ExplorePage from './pages/ExplorePages/ExplorePage'
 
 
 import HomeLayout from "./Layouts/HomeLayout"; // Changed import name to DrawerLayout
@@ -21,7 +21,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+ <BrowserRouter basename="/blog">
         <ErrorBoundary>
           <Routes>
             <Route path="/" element={<Homepage />} />
