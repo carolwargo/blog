@@ -113,7 +113,7 @@ const ExploreBusiness = () => {
                       </p>
                     </div>
                   </Link>
-                  <Link to={"/"} className="text-decoration-none text-dark">
+             <Link to={"/classes"} className="text-decoration-none text-dark">
                     {/**start business services 6 */}
                     <div className="">
                       <button className=" btn btn-outline-dark rounded-5 w-100 mt-2"
