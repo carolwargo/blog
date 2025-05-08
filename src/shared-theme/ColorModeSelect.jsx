@@ -1,3 +1,5 @@
+//./src/shared-theme/ColorModeSelect.jsx
+//AppAppBar.jsx, CheckoutPage, Colormode
 import * as React from 'react';
 import { useColorScheme } from '@mui/material/styles';
 import MenuItem from '@mui/material/MenuItem';

@@ -1,3 +1,6 @@
+//.src/shared-theme/createTheme.js
+// DashboardPage
+
 import { createTheme, alpha } from '@mui/material/styles';
 
 const defaultTheme = createTheme();

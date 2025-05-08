@@ -1,3 +1,5 @@
+//./src/shared-theme/ColorModeIconDropdown.jsx
+//AppAppBar.jsx, CheckoutPage, ColormodeSelect, ExploreClassesPage, ExploreJobsPage 
 import * as React from 'react';
 import DarkModeIcon from '@mui/icons-material/DarkModeRounded';
 import LightModeIcon from '@mui/icons-material/LightModeRounded';

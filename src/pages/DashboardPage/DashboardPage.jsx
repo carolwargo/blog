@@ -108,8 +108,10 @@ export default function DashboardLayoutBasic(props) {
       theme={demoTheme}
       window={demoWindow}
     >
-      <DashboardLayout>
-        <PageContainer>
+
+   
+<DashboardLayout title="My Custom Title">
+  <PageContainer>
           <Grid container spacing={1}>
             <Grid size={5} />
             <Grid size={12}>
