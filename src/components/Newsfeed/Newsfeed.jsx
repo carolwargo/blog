@@ -3,8 +3,11 @@ import React from "react";
 import Header from "../Header/Header";
 import UserNav from "../Nav/UserNav";
 import GirlCamera from "../../assets/images/GirlCamera.png";
+import { newsfeedPosts } from "../../constants/NewsfeedPosts";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Newsfeed.css"; // Import your CSS file for styling
+
 
 import {
   FaImage,
@@ -98,131 +101,44 @@ export default function Newsfeed() {
           </div>
         </div>
 
-        {/**Posts start */}
-        <div className="w3-card w3-white w3-round w3-margin">
+        <>
+      {newsfeedPosts.map((post) => (
+        <div key={post.id} className="w3-card w3-white w3-round w3-margin">
           <div className="w3-margin">
             <br />
-            <img
-              src="https://i.pravatar.cc/150?img=2"
-              alt="Avatar 2"
-              className="profile-img-small"
-            />
-            <span style={{ fontSize: "1.25rem" }}>John Doe</span>
-            <span className="w3-right w3-opacity">1 min</span>
+            <img src={post.avatar} alt="Avatar" className="profile-img-small" />
+            <span style={{ fontSize: "1.25rem" }}>{post.name}</span>
+            <span className="w3-right w3-opacity">{post.time}</span>
             <br />
             <hr className="w3-clear" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <div className="w3-row-padding" style={{ margin: "0 -16px" }}>
-              <div className="w3-half">
-                <img
-                  src="https://picsum.photos/id/1015/600/400"
-                  alt="Northern Lights"
-                  style={{ width: "100%" }}
-                  className="w3-margin-bottom"
-                />
+            <p>{post.content}</p>
+            {post.images.length > 0 && (
+              <div className="w3-row-padding" style={{ margin: "0 -16px" }}>
+                {post.images.map((img, index) => (
+                  <div
+                    key={index}
+                    className={post.images.length === 1 ? "w3-col" : "w3-half"}
+                  >
+                    <img
+                      src={img}
+                      alt={`Post image ${index + 1}`}
+                      className="w3-margin-bottom"
+                      style={{ width: "100%" }}
+                    />
+                  </div>
+                ))}
               </div>
-              <div className="w3-half">
-                <img
-                  src="https://picsum.photos/id/1016/600/400"
-                  style={{ width: "100%" }}
-                  alt="Nature"
-                  className="w3-margin-bottom"
-                />
-              </div>
-            </div>
-            <button
-              type="button"
-              className="w3-button w3-theme-d1 w3-margin-bottom"
-            >
+            )}
+            <button className="w3-button w3-theme-d1 w3-margin-bottom">
               <FaThumbsUp /> Like
             </button>
-            <button
-              type="button"
-              className="w3-button w3-theme-d2 w3-margin-bottom"
-            >
+            <button className="w3-button w3-theme-d2 w3-margin-bottom">
               <FaComment /> Comment
             </button>
           </div>
         </div>
-
-        <div className="w3-card w3-white w3-round w3-margin">
-        <div className="w3-margin">
-            <br />
-            <img
-              src="https://i.pravatar.cc/150?img=3"
-              alt="Avatar 2"
-               className="profile-img-small"
-            />
-            <span style={{ fontSize: "1.25rem" }}>John Doe</span>
-            <span className="w3-right w3-opacity">1 min</span>
-            <br />
-            <hr className="w3-clear" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <button
-              type="button"
-              className="w3-button w3-theme-d1 w3-margin-bottom"
-            >
-              <FaThumbsUp /> Like
-            </button>
-            <button
-              type="button"
-              className="w3-button w3-theme-d2 w3-margin-bottom"
-            >
-              <FaComment /> Comment
-            </button>
-          </div>
-        </div>
-
-        <div className="w3-card w3-white w3-round w3-margin">
-          <div className="w3-margin">
-            <br />
-            <img
-              src="https://i.pravatar.cc/150?img=6"
-              alt="Avatar 6"
-              className="profile-img-small"
-            />
-                  <span style={{ fontSize: "1.25rem" }}>John Doe</span>
-            <span className="w3-right w3-opacity">32 min</span>
-            <br />
-            <hr className="w3-clear" />
-            
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <img
-              src="https://picsum.photos/id/1016/600/400"
-              alt="Nature"
-              style={{ width: "100%" }}
-              className="w3-margin-bottom"
-            />
-     
-            <button
-              type="button"
-              className="w3-button w3-theme-d1 w3-margin-bottom"
-            >
-              <FaThumbsUp /> Like
-            </button>
-            <button
-              type="button"
-              className="w3-button w3-theme-d2 w3-margin-bottom"
-            >
-              <FaComment /> Comment
-            </button>
-          </div>
-        </div>
+      ))}
+    </>
       </div>
     </div>
   );
